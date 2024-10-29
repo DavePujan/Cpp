@@ -1,0 +1,155 @@
+why Object-Oriented Programming (OOP) is useful:
+
+--> Organization
+    OOP keeps code tidy by organizing it into classes, making it easier to manage.
+
+--> Reusability
+    You can reuse code from one class in other projects, saving time and effort.
+
+--> Data Protection
+    OOP hides data inside classes, which helps prevent accidental changes and keeps it safe.
+
+
+
+
+
+Procedural Programming:
+
+    A programming paradigm based on the concept of procedure calls, where tasks are structured as sequences of procedures or functions.
+
+Features:
+    Focus on functions or procedures.
+    Data and functions are separate.
+    Control flow is managed through loops and conditionals.
+
+example:
+1.Data Structures:
+    Use arrays or simple data structures to store book information (like title, author, etc.).
+
+Functions:
+2.Create functions for each operation.
+    - Function: addBook(title, author)
+    - Function: removeBook(title)
+    - Function: displayBooks()
+
+3.Flow:
+    You’d call these functions in a sequential manner, passing the necessary data as arguments.
+
+
+
+
+
+Object-Oriented Programming (OOP):
+
+    A programming paradigm that uses "objects" to represent data and methods, promoting greater flexibility and reusability.
+
+    Class: Basic template for creating objects.
+
+    Object: Basic run time entities.
+
+    Data abstraction (Hiding data) & Encapsulation (Creating unit and wrap data into it.): wrapping data and functions into single unit.
+
+    Inheritance(make copy from parent): Properties of one class can be inherited into others.
+
+    Polymorphism(Double role type): Ability to take more than one forms.
+
+    Abstraction: The concept of hiding the complex reality while exposing only the necessary parts, often achieved through abstract classes or interfaces.
+
+    Dynamic Binding(You can only know that what will be you r output at the time when your code will be executed): code which will execute is not know until the program.(late binding)
+
+    Message Passing: Object.message(info) call format.
+
+example of OOP:
+1.Class Definition:
+    Define a Book class to encapsulate book-related attributes and methods.
+
+    Class: Book
+    - Attributes: title, author
+    - Methods: add(), remove(), display()
+
+2.Object Creation:
+    Create objects of the Book class to represent individual books.
+
+3.Interaction:
+    Use methods of the Book class to perform operations.
+
+
+
+
+
+
+What is Meassage passing?-->
+
+Example in Theory:
+
+Imagine you have two classes: Dog and Owner. The Owner can send a message to the Dog to make it bark.
+
+Owner sends a message to Dog: "bark()"
+
+example:
+class Dog {
+    void bark() {
+        std::cout << "Woof!" << std::endl;
+    }
+};
+
+class Owner {
+    void makeDogBark(Dog& dog) {
+        dog.bark(); // Sending a message to Dog
+    }
+};
+
+int main() {
+    Dog myDog;
+    Owner myOwner;
+
+    myOwner.makeDogBark(myDog); // Owner sends message to Dog
+    return 0;
+}
+
+Advantages of Message Passing:
+    Decoupling: Objects can interact without needing to know the details of each other's implementations.
+
+
+
+
+
+
+what is Dynamic Binding (Late Binding)?
+    -->Dynamic binding, also known as late binding or data binding, is a concept in programming where the method to be invoked is determined at runtime rather than at compile time. 
+    -->This is particularly important in object-oriented programming (OOP) for achieving polymorphism.
+
+
+Example in Theory:
+
+Step 1: Define a Base Class
+    Class: Shape
+    - Method: draw() (virtual)
+
+Step 2: Derived Classes
+
+    Circle: Overrides draw() to say "Drawing a circle".
+    Rectangle: Overrides draw() to say "Drawing a rectangle".
+
+    Class: Circle (inherits from Shape)
+    - Method: draw() 
+    - Output: "Drawing a circle"
+
+    Class: Rectangle (inherits from Shape)
+    - Method: draw() 
+    - Output: "Drawing a rectangle"
+
+Step 3: Using Dynamic Binding
+
+    Call the Function: You call drawShape() with a Shape pointer pointing to either a Circle or a Rectangle.
+
+    Dynamic Resolution: At runtime, the program determines which draw() method to invoke based on the actual type of the object (either Circle or Rectangle).
+
+    Function: drawShape(Shape* shape)
+    - Call shape->draw()
+
+step 4: Example Output
+    If you execute the program with the following calls:
+
+drawShape(circle);  // Outputs: "Drawing a circle"
+drawShape(rectangle); // Outputs: "Drawing a rectangle"
