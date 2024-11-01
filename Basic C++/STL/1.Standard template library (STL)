@@ -1,0 +1,74 @@
+STL = Container (object which stores data.) + Algo (procedure to process data.) + Iterators (object points to an element in a container.)
+        
+
+
+-The C++ Standard Template Library (STL) is a powerful set of C++ template classes that provides general-purpose classes and functions for data structures and algorithms. 
+-It simplifies the development process by providing ready-to-use components. Here’s an overview of its key components:
+
+-Key Components of the STL
+
+1. Containers: 
+-object which stores data.
+-These are data structures that store objects. 
+
+The STL provides several types of containers:
+
+   - Sequence Containers: Store elements in a linear order.
+        - vector: Dynamic array that can grow in size.
+                -random access -->fast
+                -insertion / del --> slow
+                -insertion / del at end -->fast
+        - deque: Double-ended queue allowing fast insertions and deletions at both ends.
+        - list: Doubly linked list allowing fast insertions and deletions from anywhere.
+                -random access -->slow
+                -insertion / del --> fast
+                -insertion / del at end -->fast
+
+   - Associative Containers: Store elements in a way that allows for fast retrieval based on keys.
+                -all opperations fast except random access.
+        -it is a tree like structure,used for fast searching,fast access, fast deletion...
+            - set: Collection of unique elements.
+            - map: Collection of key-value pairs, where keys are unique.
+            - multiset and multimap: Similar to set and map, but allow duplicate keys.
+
+   - Unordered Containers: Use hash tables for fast access.
+        - unordered_set: Collection of unique elements with no specific order.
+        - unordered_map: Collection of key-value pairs with no specific order.
+
+    - Derived containers: typically refer to custom container classes that are created by inheriting from existing STL containers.
+         -used for realworld object modeling.
+            - Stack
+            - Queue
+
+2. Algorithms: 
+-procedure to process data.
+-The STL provides a wide variety of algorithms for tasks like searching, sorting, and manipulating data. Some commonly used algorithms include:
+   - sort(): Sorts elements in a container.
+   - find(): Searches for an element.
+   - copy(): Copies elements from one container to another.
+   - accumulate(): Computes the sum of elements.
+
+3. Iterators: 
+-object points to an element in a container.
+-handled just like pointers.
+-connects algo with containers.
+
+-These are objects that allow you to traverse the elements of a container without exposing the underlying structure. They provide a uniform interface to access elements, regardless of the container type. Types of iterators include:
+   - Input Iterator: Can read data from a container.
+   - Output Iterator: Can write data to a container.
+   - Forward Iterator: Can read and write data in one direction.
+   - Bidirectional Iterator: Can move both forward and backward.
+   - Random Access Iterator: Can jump to any element in constant time.
+
+
+- Advantages of Using STL
+
+    1. Reusability: The STL provides a library of reusable components, reducing code duplication.
+    2. Performance: STL algorithms are optimized and implemented with high performance in mind.
+    3. Flexibility: The use of templates allows for type-safe and flexible programming.
+    4. Ease of Use: With built-in containers and algorithms, developers can focus more on problem-solving rather than data structure implementation.
+
+- Conclusion
+
+The C++ Standard Template Library is a powerful tool that provides a wide range of data structures, algorithms, and utilities to simplify coding tasks. 
+-By leveraging STL, developers can write more efficient, cleaner, and maintainable code. If you're working with C++, becoming familiar with STL is highly beneficial!
